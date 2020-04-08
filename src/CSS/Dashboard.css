@@ -1,0 +1,64 @@
+.header{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logout-button
+{
+
+    padding: 5px;
+    width: 100px;
+    height: 40px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid black;
+    color:black;
+    text-transform: capitalize;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.content{
+
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 130px;
+    padding: 10px;
+}
+.content-header
+{
+    color:grey;
+    margin-bottom: 40px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex: 1;
+    width: 100%;
+}
+.button-list
+{
+
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: auto;
+}
+
+.fav-container{
+
+    margin-top:50px;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+.fav-container button{
+
+    margin: 10px;
+}

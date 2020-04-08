@@ -1,0 +1,113 @@
+
+h1{
+
+    text-transform: uppercase;
+    font-weight: 500;
+    word-spacing: 10px;
+    letter-spacing: 7px;
+}
+
+h1 + p{
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 10px;
+
+}
+.div-container{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+}
+
+.sub-container{
+
+    margin-top:30px;
+}
+.form{
+
+    display: flex;  
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px;
+    border: 1px solid black;
+    padding: 50px;
+
+}
+
+.form div{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+.form div label{
+
+    margin-right: 30px;
+    font-size: 18px;
+    flex: 1;
+}
+
+.form div input{
+
+    border-radius: 0;
+    background-color: #FFF;
+    border: 1.1px solid black;
+    padding: 5px;
+    flex: 2.3;
+}
+input[type='date']{
+
+    flex: 2.3;
+    padding: 7px;
+}
+
+select
+{
+    flex: 2.3;
+    padding: 7px;
+}
+
+.sign-header
+{
+
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+}
+
+
+.sign-button
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background-color: red;
+    border-radius: 0;
+    padding: 10px;
+    width: 100px;
+    height:100px;
+    margin: 20px auto;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid black;
+    color:black;
+    text-transform: capitalize;
+}
+
+
+.link{
+
+    margin: auto;
+    display: inline-block;
+    color: #97c2de;
+    font-size: 17px;
+}

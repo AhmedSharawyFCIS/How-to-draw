@@ -1,0 +1,22 @@
+.type-div{
+
+   margin-left: -80px;
+   text-decoration: underline;
+   font-weight: 900;
+   font-size: 18px;
+}
+
+.image{
+
+    width: 600px;
+}
+.imageButton
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.imageButton button
+{
+    margin: 5px;
+}

@@ -4,7 +4,7 @@ import '../CSS/register.css'
 import api from '../axios'
 class  Register extends React.Component {
 
-    state = {selectValue:'male',name:'',username:'',password:'',birthday:'',error:'',login:false}
+    state = {selectValue:'male',name:'',username:'',password:'',birthday:'',error:'',login:false,required:false}
 
  handleSelectState = (event) => {
     this.setState({selectValue: event.target.value});
@@ -38,7 +38,7 @@ handleBirthday = (event) => {
             }).then(res=>{
 
                 console.log(res.data)
-                this.setState({error:'Successfully registered',login:true})
+                this.setState({error:'Successfully registered',login:true,required:false})
             }).catch(error=>{
 
                 this.setState({error:'Invalid User Name or Password'})
@@ -48,7 +48,7 @@ handleBirthday = (event) => {
 
         else
         {
-            this.setState({error:'Please fill the required fields'})
+            this.setState({error:'Please fill the required fields',required:true})
         }
     }
 render()
@@ -80,14 +80,14 @@ render()
                         <label>User Name:</label>
                         <input type='text' value={this.state.username} onChange={this.handleUserName}/>
                    </div>
-                   {!this.state.username&&<div style={{marginLeft:'80px',display:'flex',justifyContent:'center',alignItems:'center',color:'red'}}>User Name is Required</div>}
+                   {!this.state.username&&this.state.required&&<div style={{marginLeft:'110px',display:'flex',justifyContent:'center',alignItems:'center',color:'red'}}>User Name is Required</div>}
                    <div>
                         <label>Password:</label>
                         <input type='text' value={this.state.password} onChange={this.handlePassword}/>
                    </div>
-                   {!this.state.password&&<div style={{marginLeft:'80px',display:'flex',justifyContent:'center',alignItems:'center',color:'red'}}>Password is Required</div>}
+                   {!this.state.password&&this.state.required&&<div style={{marginLeft:'100px',display:'flex',justifyContent:'center',alignItems:'center',color:'red'}}>Password is Required</div>}
                    <div>
-                        <label>Birthday:</label>
+                        <label className='birthday'>Birthday:</label>
                         <input type='date' value={this.state.birthday} onChange={this.handleBirthday}/>
                    </div>
                    <div>

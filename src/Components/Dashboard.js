@@ -10,8 +10,7 @@ class Dashboard extends React.Component  {
 
  handleLogout = () => {
 
-    
-   this.setState({logout:true})
+    this.setState({logout:true})
      
     }
     render(){
@@ -25,7 +24,7 @@ class Dashboard extends React.Component  {
         <div className='div-container'>
             
             <div className='header'>
-                <h5>{this.props.match.params.userName}</h5>
+                <h3>{this.props.match.params.userName}</h3>
                 <button  className='logout-button' onClick={this.handleLogout}>Logout</button>
             </div>
             <h1>how to draw</h1>
@@ -48,7 +47,7 @@ class Dashboard extends React.Component  {
 
             <div className="fav-container header">
                 <button  className='logout-button'>show all fav</button>
-                <button  className='logout-button'>show all complete</button>
+                <button  className='logout-button' >show all complete</button>
             </div>
         </div>
     )

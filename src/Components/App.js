@@ -7,6 +7,8 @@ import Category from './Category';
 import Details from './Details';
 import {Provider} from 'react-redux'
 import {createStore,combineReducers} from 'redux'
+import Favorites from './Favorites';
+import Completed from './Completed';
 import Reducer from '../Redux/reducer';
 
 const Reducers = combineReducers({
@@ -24,9 +26,11 @@ const App = () => {
             <div>
                 <Route path="/" exact component={Register}/>
                 <Route path="/Login" exact component={Login}/>
-                <Route path="/Dashboard/:userName" component={Dashboard}/>
-                <Route path="/Category/:type/:userName" component={Category}/>
-                <Route path="/Details/:name/:type/:userName" component={Details}/>
+                <Route path="/Dashboard/:userName" exact component={Dashboard}/>
+                <Route path="/Category/:type/:userName" exact component={Category}/>
+                <Route path="/Details/:name/:type/:userName" exact component={Details}/>
+                <Route path="/Favorites/:userName"  exact component={Favorites}/>
+                <Route path="/Completed/:userName" exact component={Completed}/>
             </div>
     </BrowserRouter>           
 </Provider>

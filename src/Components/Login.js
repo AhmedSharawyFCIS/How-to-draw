@@ -6,7 +6,7 @@ import {connect} from 'react-redux'
 
 class Login extends React.Component {
 
-    state = {username:'',password:'',error:'',redirect:false}
+    state = {username:'',password:'',error:'',redirect:false,required:false}
 
     
     handleUserName = (event) => {
@@ -17,8 +17,10 @@ class Login extends React.Component {
         }
     handleLogin = () =>{
 
+        
         if(this.state.name !== '' && this.state.username !== '' && this.state.password !== '')
         {
+
             api.post('/users/login',{
 
                 
@@ -26,7 +28,7 @@ class Login extends React.Component {
                 password:this.state.password
             }).then(res=>{
 
-                this.setState({redirect:true})
+                this.setState({redirect:true,required:false})
                 console.log(res.data)
                 
             }).catch(error=>{
@@ -38,7 +40,7 @@ class Login extends React.Component {
 
         else
         {
-            this.setState({error:'Please fill the required fields'})
+            this.setState({error:'Please fill the required fields',required:true})
         }
     }
 
@@ -66,13 +68,13 @@ class Login extends React.Component {
                         <label style={{flex:1}}>User Name:</label>
                         <input type='text' style={{flex:1}} value={this.state.username} onChange={this.handleUserName}/>
                    </div>
-                   {!this.state.username&&<div style={{marginLeft:'100px',display:'flex',justifyContent:'center',alignItems:'center',color:'red'}}>User Name is Required</div>}
+                   {!this.state.username&&this.state.required&&<div style={{marginLeft:'100px',display:'flex',justifyContent:'center',alignItems:'center',color:'red'}}>User Name is Required</div>}
                    <div>
                         <label>Password:</label>
                         <input type='text' style={{flex:1}} value={this.state.password} onChange={this.handlePassword}/>
                    </div>
 
-                   {!this.state.password&&<div style={{marginLeft:'100px',display:'flex',justifyContent:'center',alignItems:'center',color:'red'}}>Password is Required</div>}
+                   {!this.state.password&&this.state.required&&<div style={{marginLeft:'100px',display:'flex',justifyContent:'center',alignItems:'center',color:'red'}}>Password is Required</div>}
 
                    <button className='sign-button' style={{marginBottom:'-20px'}} onClick={this.handleLogin}>Login</button>
                    {this.state.error&&<div style={{marginTop:'30px',display:'flex',justifyContent:'center',alignItems:'center',color:'red'}}>{this.state.error}</div>}

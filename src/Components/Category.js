@@ -103,7 +103,7 @@ handleLogOut = () =>{
         <div className='div-container'>
 
             <div className='header'>
-                <h5>{this.props.match.params.userName}</h5>
+                <h3>{this.props.match.params.userName}</h3>
                 <button  className='logout-button' onClick={this.handleLogOut}>Logout</button>
             </div>
             

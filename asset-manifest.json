@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/How-to-draw.git/static/css/main.1eae6f56.chunk.css",
+    "main.js": "/How-to-draw.git/static/js/main.ac987fb0.chunk.js",
+    "main.js.map": "/How-to-draw.git/static/js/main.ac987fb0.chunk.js.map",
+    "runtime-main.js": "/How-to-draw.git/static/js/runtime-main.6fedb0ba.js",
+    "runtime-main.js.map": "/How-to-draw.git/static/js/runtime-main.6fedb0ba.js.map",
+    "static/js/2.62113b78.chunk.js": "/How-to-draw.git/static/js/2.62113b78.chunk.js",
+    "static/js/2.62113b78.chunk.js.map": "/How-to-draw.git/static/js/2.62113b78.chunk.js.map",
+    "index.html": "/How-to-draw.git/index.html",
+    "precache-manifest.07c8e51a0f9a0bcf3346fd82c84f00bf.js": "/How-to-draw.git/precache-manifest.07c8e51a0f9a0bcf3346fd82c84f00bf.js",
+    "service-worker.js": "/How-to-draw.git/service-worker.js",
+    "static/css/main.1eae6f56.chunk.css.map": "/How-to-draw.git/static/css/main.1eae6f56.chunk.css.map",
+    "static/js/2.62113b78.chunk.js.LICENSE.txt": "/How-to-draw.git/static/js/2.62113b78.chunk.js.LICENSE.txt",
+    "static/media/animal1.jpeg": "/How-to-draw.git/static/media/animal1.b691b125.jpeg",
+    "static/media/animal2.jpeg": "/How-to-draw.git/static/media/animal2.bcc628e2.jpeg",
+    "static/media/car1.jpeg": "/How-to-draw.git/static/media/car1.dfb993d6.jpeg",
+    "static/media/car2.jpeg": "/How-to-draw.git/static/media/car2.14549860.jpeg",
+    "static/media/car3.jpeg": "/How-to-draw.git/static/media/car3.0a6a8623.jpeg",
+    "static/media/car4.jpeg": "/How-to-draw.git/static/media/car4.81b8a531.jpeg",
+    "static/media/car5.jpeg": "/How-to-draw.git/static/media/car5.586f2882.jpeg",
+    "static/media/car6.jpeg": "/How-to-draw.git/static/media/car6.57171284.jpeg",
+    "static/media/cow.jpeg": "/How-to-draw.git/static/media/cow.83a8e4de.jpeg",
+    "static/media/flower1.jpeg": "/How-to-draw.git/static/media/flower1.f5f528df.jpeg",
+    "static/media/flower2.jpeg": "/How-to-draw.git/static/media/flower2.3284ecec.jpeg",
+    "static/media/flower3.jpeg": "/How-to-draw.git/static/media/flower3.a68b5796.jpeg",
+    "static/media/flower4.jpeg": "/How-to-draw.git/static/media/flower4.eace2028.jpeg",
+    "static/media/flower5.jpeg": "/How-to-draw.git/static/media/flower5.90ebea83.jpeg",
+    "static/media/food1.jpeg": "/How-to-draw.git/static/media/food1.4230d93a.jpeg",
+    "static/media/food2.jpeg": "/How-to-draw.git/static/media/food2.1b55fcc1.jpeg",
+    "static/media/food3.jpeg": "/How-to-draw.git/static/media/food3.88325705.jpeg",
+    "static/media/oswald the moose.jpeg": "/How-to-draw.git/static/media/oswald the moose.cd2f625c.jpeg",
+    "static/media/pizza.jpeg": "/How-to-draw.git/static/media/pizza.3b3c4c06.jpeg",
+    "static/media/tiger.jpeg": "/How-to-draw.git/static/media/tiger.62c5d163.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6fedb0ba.js",
+    "static/js/2.62113b78.chunk.js",
+    "static/css/main.1eae6f56.chunk.css",
+    "static/js/main.ac987fb0.chunk.js"
+  ]
+}

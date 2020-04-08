@@ -10,7 +10,7 @@ class Dashboard extends React.Component  {
 
  handleLogout = () => {
 
-    this.setState({logout:true})
+    this.setState({logout:true,showFav:false,showComplete:false})
      
     }
     render(){
@@ -18,6 +18,16 @@ class Dashboard extends React.Component  {
         if(this.state.logout)
         {
             return  <Redirect to={`/Login`}/>
+        }
+
+        else if(this.state.showFav)
+        {
+           return <Redirect to={`/Favorites/${this.props.match.params.userName}`}/>
+        }
+   
+        else if(this.state.showComplete)
+        {
+           return <Redirect to={`/Completed/${this.props.match.params.userName}`}/>
         }
     return(
 
@@ -46,8 +56,8 @@ class Dashboard extends React.Component  {
             </div>
 
             <div className="fav-container header">
-                <button  className='logout-button'>show all fav</button>
-                <button  className='logout-button' >show all complete</button>
+                <button  className='logout-button' onClick={()=>{this.setState({showFav:true})}}>show all fav</button>
+                <button  className='logout-button' onClick={()=>{this.setState({showComplete:true})}}>show all complete</button>
             </div>
         </div>
     )

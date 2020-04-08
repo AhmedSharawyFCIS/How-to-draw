@@ -75,7 +75,7 @@ class Login extends React.Component {
                    {!this.state.password&&<div style={{marginLeft:'100px',display:'flex',justifyContent:'center',alignItems:'center',color:'red'}}>Password is Required</div>}
 
                    <button className='sign-button' style={{marginBottom:'-20px'}} onClick={this.handleLogin}>Login</button>
-                   {this.state.error&&<div style={{display:'flex',justifyContent:'center',alignItems:'center',color:'red'}}>{this.state.error}</div>}
+                   {this.state.error&&<div style={{marginTop:'30px',display:'flex',justifyContent:'center',alignItems:'center',color:'red'}}>{this.state.error}</div>}
                 </div>
             </div>
             

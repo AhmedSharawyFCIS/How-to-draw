@@ -1,10 +1,10 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link,Redirect} from 'react-router-dom';
 import '../CSS/register.css'
 import api from '../axios'
 class  Register extends React.Component {
 
-    state = {selectValue:'male',name:'',username:'',password:'',birthday:'',error:''}
+    state = {selectValue:'male',name:'',username:'',password:'',birthday:'',error:'',login:false}
 
  handleSelectState = (event) => {
     this.setState({selectValue: event.target.value});
@@ -25,6 +25,7 @@ handleBirthday = (event) => {
 
     handleSignUp = () =>{
 
+       
         if(this.state.username !== '' && this.state.password !== '')
         {
             api.post('/users',{
@@ -37,7 +38,7 @@ handleBirthday = (event) => {
             }).then(res=>{
 
                 console.log(res.data)
-                this.setState({error:'Successfully registered'})
+                this.setState({error:'Successfully registered',login:true})
             }).catch(error=>{
 
                 this.setState({error:'Invalid User Name or Password'})
@@ -53,6 +54,10 @@ handleBirthday = (event) => {
 render()
 {
     console.log(this.state.birthday)
+    if(this.state.login)
+    {
+        return <Redirect to={`/Login`}/>
+    }
     return(
 
         <div className='div-container'>
@@ -60,7 +65,7 @@ render()
             <h1>how to draw</h1>
             <p>step-by-step</p>
 
-            <div className='sub-container'>
+            <div className='sub-container' style={{marginTop:'-5px'}}>
                
                <p className='sign-header'> sign up</p>
 
